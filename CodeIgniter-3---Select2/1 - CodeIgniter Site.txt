@@ -1,0 +1,16 @@
+https://codeigniter.com/userguide3/
+
+
+Download CodeIgniter 
+
+https://codeigniter.com/userguide3/ -> Installation Instruction -> Downloading CodeIgniter -> CodeIgniter v3.1.11 
+
+
+
+Installation Instructions
+
+1. Unzip the downloaded package
+
+2. Copy CodeIgniter v3.1.11 folder to xampp -> htdocs -> paste CodeIgniter v3.1.11
+
+3. Rename CodeIgniter v3.1.11 to ci_select_2

@@ -1,0 +1,3 @@
+project_folder -> app-assets 
+
+File Name: main.js

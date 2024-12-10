@@ -1,0 +1,30 @@
+<?php
+
+class Course extends CI_Controller 
+{
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->load->model('coursemodel');
+
+        $this->load->helper('url');
+    }
+
+    public function index()
+    {
+        $this->load->view('course_ui');
+    }
+
+    // Get Course
+    public function getCourse()
+    {
+        // Search term
+        $searchTerm = $this->input->post('searchTerm');
+
+        // Get Course
+        $response = $this->coursemodel->getCourse($searchTerm);
+
+        echo json_encode($response);
+    }
+}

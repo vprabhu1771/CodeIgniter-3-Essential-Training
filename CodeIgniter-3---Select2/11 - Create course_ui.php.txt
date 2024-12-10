@@ -1,0 +1,3 @@
+under -> application -> views
+
+FileName: course_ui.php

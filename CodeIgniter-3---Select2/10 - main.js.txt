@@ -1,0 +1,47 @@
+$(document).ready(function(){
+
+    $("#select_course").select2({
+       ajax: { 
+         url: 'course/getCourse',
+         type: "post",
+         dataType: 'json',
+         delay: 250,
+         data: function (params) {
+            return {
+              searchTerm: params.term // search term
+            };
+         },
+         processResults: function (response) {
+
+            // Transform JSON data Into objects
+            var json = [];
+
+            $.each(response, function(index, value){
+             
+                 // create array of object property named id and a property named text very important
+                 var output = {
+                     id: value.course_name,
+                     text: value.course_name
+                 };
+
+                 json.push(output);
+             
+            })
+
+            // console.log(json);
+
+            return {
+               results: json
+            };
+         },
+         cache: true
+       }
+    }).on('select2:close', function(){
+
+        var element = $(this);
+        var selected_city = $.trim(element.val());
+
+        console.log(selected_city);        
+    });
+
+ });

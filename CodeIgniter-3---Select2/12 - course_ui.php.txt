@@ -1,0 +1,31 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+
+    <!-- JQuery -->
+    <script src="<?= base_url() ?>app-assets/jquery-3.6.0.min.js"></script>
+
+    <!-- Select 2 -->
+    <link href="<?= base_url() ?>app-assets/select2/select2.min.css" rel="stylesheet" />
+
+    <script src="<?= base_url() ?>app-assets/select2/select2.min.js"></script>
+
+    
+    <script src="<?= base_url() ?>app-assets/main.js"></script>
+</head>
+<body>
+    
+    <select id='select_course' style='width: 200px;'>
+    
+        <option value='0'>-- Select course --</option>
+
+    </select>
+</body>
+</html>

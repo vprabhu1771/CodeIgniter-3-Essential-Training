@@ -1,0 +1,36 @@
+<?php
+class CourseModel extends CI_Model {
+
+    protected $table = "course";
+
+    public function __construct()
+    {
+        $this->load->database();
+    }
+
+    // Fetch Course
+    public function getCourse($searchTerm = "")
+    {
+        $this->db->select('*');
+
+        $this->db->where("course_name like '%".$searchTerm."%' ");
+
+        $fetched_records = $this->db->get($this->table);
+
+        $course = $fetched_records->result_array();
+
+        // Initialize Array with fetched data
+
+        $data = array();
+
+        foreach($course as $row)
+        {
+            $data[] = array(
+                "course_id" => $row['course_id'], 
+                "course_name" => $row['course_name']
+            );
+        }
+
+        return $data;
+    }
+}

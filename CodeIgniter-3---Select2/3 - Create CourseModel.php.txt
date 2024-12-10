@@ -1,0 +1,3 @@
+under -> application -> model 
+
+FileName: CourseModel.php
